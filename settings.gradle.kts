@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "kuery"
-include(":library")
+include(":kuery")

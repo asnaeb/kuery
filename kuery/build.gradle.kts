@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.asnaeb"
-version = "1.0.0"
+version = "0.0.1"
 
 kotlin {
     jvm()
@@ -59,7 +59,7 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates(group.toString(), "library", version.toString())
+    coordinates(group.toString(), name, version.toString())
 
     pom {
         name = "Kuery"
