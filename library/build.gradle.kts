@@ -65,25 +65,25 @@ mavenPublishing {
         name = "Kuery"
         description = "Data fetching library"
         inceptionYear = "2025"
-        url = "https://github.com/asnaeb/kuery/"
+        url = "https://github.com/asnaeb/kuery"
         licenses {
             license {
-                name = "XXX"
-                url = "YYY"
-                distribution = "ZZZ"
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
             }
         }
         developers {
             developer {
                 id = "asnaeb"
                 name = "Roberto De Lucia"
-                url = "ZZZ"
+                url = "https://github.com/asnaeb"
             }
         }
         scm {
-            url = "XXX"
-            connection = "YYY"
-            developerConnection = "ZZZ"
+            url = "https://github.com/asnaeb/kuery"
+            connection = "scm:git:git://github.com/asnaeb/kuery.git"
+            developerConnection = "scm:git:ssh://git@github.com/asnaeb/kuery.git"
         }
     }
 }
