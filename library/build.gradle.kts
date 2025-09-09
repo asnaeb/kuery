@@ -5,9 +5,12 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.vanniktech.mavenPublish)
+    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.composeCompiler)
+    kotlin("plugin.serialization") version libs.versions.kotlin
 }
 
-group = "io.github.kotlin"
+group = "io.github.asnaeb"
 version = "1.0.0"
 
 kotlin {
@@ -27,7 +30,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+                implementation(compose.runtime)
+                implementation(libs.kotlinx.serialization.json)
             }
         }
         val commonTest by getting {
@@ -39,7 +43,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.jetbrains.kotlinx.multiplatform.library.template"
+    namespace = "io.github.asnaeb"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -58,10 +62,10 @@ mavenPublishing {
     coordinates(group.toString(), "library", version.toString())
 
     pom {
-        name = "My library"
-        description = "A library."
-        inceptionYear = "2024"
-        url = "https://github.com/kotlin/multiplatform-library-template/"
+        name = "Kuery"
+        description = "Data fetching library"
+        inceptionYear = "2025"
+        url = "https://github.com/asnaeb/kuery/"
         licenses {
             license {
                 name = "XXX"
@@ -71,8 +75,8 @@ mavenPublishing {
         }
         developers {
             developer {
-                id = "XXX"
-                name = "YYY"
+                id = "asnaeb"
+                name = "Roberto De Lucia"
                 url = "ZZZ"
             }
         }
